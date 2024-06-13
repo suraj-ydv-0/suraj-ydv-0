@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+.btn {
+  /* padding: 0.75rem 1.5rem; */
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--white);
+}
+ nav {
+     position: fixed;
+     isolation: isolate;
+     width: 100%;
+     z-index: 9;
+    }
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.nav__logo img {
+  max-width: 40px;
+}
+
+.nav__links {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  gap: 2rem;
+  background-color: var(--secondary-color);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.link a {
+  color: var(--text-dark);
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.link a:hover {
+  color: var(--primary-color);
+}
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+    </style>
+    <title>Gym project for project</title>
+  </head>
+  <body>
+    <!--nav section-->
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#"><img src="logo.png" alt="logo" />Power</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="#home">Home</a></li>
+          <li class="link"><a href="aboutus.html" target="_self">About</a></li>
+          <li class="link"><a href="#class">Classes</a></li>
+          <li class="link"><a href="#trainer">Trainers</a></li>
+          <li class="link"><a href="#price">Pricing</a></li>
+          <li class="link"><a href="Contact.html" target="_self" class="href">Contact Us</a></li>
+        </ul>
+      </nav>
+  </body>
+</html>

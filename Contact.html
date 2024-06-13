@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            /* width: 90%; */
+            /* justify-content: center; */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4b4545;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #contact {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: #C8A353;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h1 {
+            margin-top: 0;
+        }
+        .contactus{
+            padding:2px;
+            text-align:left;
+            text-indent: 2%;
+        }
+        .details{
+            padding: 0%;
+            text-align: center;
+            word-spacing: 5px;
+            text-decoration: underline;
+            text-size-adjust: 1.5rem;
+            color: #043f08;
+        }
+        #contact-form {
+            margin-top: 20px;
+            justify-content: center;
+            padding: 100px 67px;
+            /* border: 1px solid black; */
+            background-color: #281924;
+            color: #fff;
+            box-shadow: 0 0 67px rgba(0, 0, 0, 0.1);
+            margin: 4px 235px;
+            border-radius: 50px;
+
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input,
+        form textarea {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        img {
+            height: 345px;
+            width: 400px;
+            padding: 0px;
+            margin-left: 327px;
+            border: 1px solid black;
+        }
+
+        #Message {
+            text-align: center;
+            justify-content: center;
+        }
+
+        #responseMessage {
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+        }
+
+
+        /*CSS footer code */
+
+        footer {
+            margin-top: 60px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        #backToTop {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #backToTop {
+            background-color: #777;
+
+        }
+
+        .social-link {
+            margin-right: 260px;
+            padding-left: 43px;
+            background-color: white;
+            padding-top: 14px;
+            border-radius: 10px;
+        }
+
+        .social-link a i {
+            padding: 5px;
+            margin-top: -10px;
+            color: #000;
+            font-size: 30px;
+            background: linear-gradient(transparent 0%, #fff 400%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px rgba(231, 103, 5, 0);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-link a i:hover {
+            background-position: 0 100%;
+            color: #fcba03;
+            background-color: #faf4f4fb;
+            border: 1px solid #fcba03;
+            transform: scale(1.2);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#trainer"></a>Trainer</li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        <div class="contactus"><h1>Contact Us</h1></div>
+        <div class="details">
+            <h3>Vidyakund Near Shree Awadh Mart Darshangar Road <br>
+                Kamigang Ayodhya,(U.P). India <br>
+                <Pin:224001>Pin:224001</Pin:224001> <br>
+            </h3>
+         </div>
+        <!-- <div class="pic"> 
+            <img src="img7.jpg" alt="Do not displayed on the screen">
+        </div>-->
+        <h2>Contact Form:</h2>
+        <p>For your convenience, you can also fill out our online contact form,
+            and one of our representatives will get back to you promptly.</p>
+
+        <h2 id="Message">Message us from here</h2>
+        <div id="contact-form" class="hidden">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="responseMessage"></div>
+        </div>
+
+        <h2>Phone:</h2>
+        <ul>
+            <li>Customer Support: +1 (123) 456-7890</li>
+            <li>Sales Department: +1 (123) 456-7891</li>
+            <li>Office Fax: +1 (123) 456-7892</li>
+        </ul>
+
+        <h2>Address:</h2>
+        <p>
+            Vidyakund Near Shree Awadh Mart Darshangar Road <br>
+            Kamigang Ayodhya,(U.P). India <br>
+            <Pin:224001>Pin:224001</Pin:224001> <br>
+             India
+        </p>
+
+        <h2>Business Hours:</h2>
+        <ul>
+            <li>Monday to Friday: 4:00 AM - 10:00 PM</li>
+            <li>Saturday: 5:00 AM - 02:00PM</li>
+            <li>Sunday: Closed</li>
+        </ul>
+
+        <h2>Social Media:</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/people/Suraj-Yaduvanshi/pfbid0SnzwpiA2pnGq8uv7EmRuWi8HB49wUmcvnL2zRRd4rDsGjfjo1JEyX88SnX9iWY2il/?mibextid=ZbWKwL">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/suraj_ydv_0?igsh=MXNrNGp6YXhjdHdidQ==">Instagram</a></li>
+        </ul>
+
+
+    </section>
+
+
+    <!-- footer code -->
+    <!-- Other content of the -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="">Surajmkp2003@gmail.com</a></p>
+                <p>Phone: +91 9721393183</p>
+                <p>Address:Vidyakund Near Shree Awadh Mart Darshangar Road <br>
+                    Kamigang Ayodhya,(U.P). India <br>
+                    <Pin:224001>Pin:224001</Pin:224001> <br> </p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-link">
+                    <a href="https://www.facebook.com/people/Suraj-Yaduvanshi/pfbid0SnzwpiA2pnGq8uv7EmRuWi8HB49wUmcvnL2zRRd4rDsGjfjo1JEyX88SnX9iWY2il/?mibextid=ZbWKwL"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/suraj_ydv_0?igsh=MXNrNGp6YXhjdHdidQ=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section back-to-top">
+                <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            document.getElementById('responseMessage').innerText = 'Thank you for contacting us, ' + name + '! We will get back to you shortly.';
+            document.getElementById('contact-form').reset();
+        } else {
+            document.getElementById('responseMessage').innerText = 'Please fill out all fields.';
+            document.getElementById('responseMessage').style.color = 'red';
+        }
+    });
+
+    // javascript code for footer
+
+
+
+    // Get the button
+    var backToTopButton = document.getElementById("backToTop");
+
+    // Show the button when the user scrolls down 20px from the top of the document
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to the top of the document
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+</script>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - gym website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            /* text-align: center; */ 
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+
+        .section {
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70));
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero {
+            width: 75%;
+            margin: auto;
+            padding: 30px 0px;
+
+        }
+
+        article h1 {
+            font-size: 1.5rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: #877e67;
+        }
+
+        article h1::after {
+            content: "";
+            height: 3px;
+            width: 225px;
+            background-color: #fcba03;
+            display: block;
+            /* margin: auto; */
+        }
+
+        img {
+            margin: auto;
+            display: block;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 40px;
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            border: 3px solid #0c0901;
+            /* border: 3px solid #bef4f7; */
+
+        }
+
+        img:hover {
+            transform: scale(1.5);
+        }
+
+        content {
+            font-size: 1.2rem;
+            color: #ccc;
+            line-height: 1.5;
+            padding: 10px
+        }
+
+        article button {
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 500;
+            margin-top: 30px;
+            color: #fcba03;
+
+        }
+
+        article p {
+            font-size: 19px;
+            color: #fff;
+        }
+
+
+        .button {
+            padding: 4px 7px;
+            border: 1px;
+            color: #fcba03;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #fcba03;
+
+            color: black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            /* border: 1px solid black; */
+        }
+
+        .button:active {
+            background-color: #f4f8f4;
+            color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* popup window */
+
+        .popup {
+            background: white;
+            border-radius: 80px;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            text-align: center;
+            align-items: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+            box-shadow: 0 0 67px rgb(255, 254, 253);
+            width: 30%;
+
+
+        }
+
+        .popup h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+            align-items: justify;
+            padding-left: 14px;
+            color: #ff7200;
+
+        }
+
+        .popup button {
+            width: 40%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: black;
+            color: white;
+            border: 2px solid black;
+            outline: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+
+        .popup button:hover::before {
+            box-shadow: 0 0 5px black,
+                0 0 25px, 0 0 50px black 0 0 100px, 0 0 200px black;
+            color: #fff800;
+        }
+
+        .popup button:hover {
+            font-size: 20px;
+            background-color: #979292;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .open-popup {
+            visibility: visible;
+            top: 0%;
+            transform: translate(-50%, -50%) scale(1);
+            margin-top: 25%;
+            margin-right: 60%;
+            text-align: center;
+            margin-right: 40%;
+            z-index: 1;
+            width: 33%;
+            height: 55%;
+        }
+
+        .social-link a i {
+            padding: 18px;
+            margin-top: 20px;
+            color: #000;
+            font-size: 30px;
+            background: linear-gradient(transparent 0%, #fcba03 400%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px rgba(231, 103, 5, 0);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-link a i:hover {
+            background-position: 0 100%;
+            color: #fcba03;
+            background-color: #000;
+            border: 1px solid #fcba03;
+            transform: scale(1.2);
+
+        }
+
+        /* CSS for the footer section */
+
+        footer {
+            margin-top: 400px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        #backToTop {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #backToTop:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="#">Classes</a></li>
+        <li><a href=""></a>Trainer</li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<body background="about2.jpg"
+    style="width: 100%; height: 180vh; background-size:cover; background-repeat: no-repeat;">
+
+    <div class="section" id="blur">
+        <div class="hero">
+            <article>
+                <h1>About Us </h1>
+                <img src="developer.jpg" alt="Do not displayed image on the screen">
+                <content>
+
+                    Our story begins in 2020, when our founders Suraj Yadav had a vision to create a fitness community that was welcoming,
+                     supportive, and dedicated to helping people achieve their health and wellness goals.
+                </content>
+               
+               <h1>Our Philosophy</h1>
+                    <content>
+                   We believe that fitness should be fun, not intimidating. Our approach is centered around
+                     providing a supportive community that encourages our members to push themselves beyond their limits.
+                    </content>
+                <div>
+
+                    <button class="button" onclick="openPopup()">Follow us</button>
+
+                </div>
+            </article>
+
+        </div>
+
+        <div class="popup" id="popup">
+
+            <h2>Your can contact with us through our scoial media</h2>
+            <div class="social-link">
+                <!-- <a href=""><i class="fa-brands fa-google"></i></a> -->
+                <a href="https://www.facebook.com/people/Suraj-Yaduvanshi/pfbid0SnzwpiA2pnGq8uv7EmRuWi8HB49wUmcvnL2zRRd4rDsGjfjo1JEyX88SnX9iWY2il/?mibextid=ZbWKwL"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/suraj_ydv_0?igsh=MXNrNGp6YXhjdHdidQ=="><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+            <!-- Adding more social media -->
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="cnclbtn"><button type="submit" onclick="closePopup()">cancel</button></div>
+        </div>
+    </div>
+
+
+
+    <!-- footr -->
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: Surajmkp2003@gmail.com</p>
+                <p><Phone:>+91 9721393183</Phone:>
+                <p>Address: Vidyakund Near Shree Awadh Mart Darshangar Road Ayodhya</p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-link">
+                    <a href="https://www.facebook.com/people/Suraj-Yaduvanshi/pfbid0SnzwpiA2pnGq8uv7EmRuWi8HB49wUmcvnL2zRRd4rDsGjfjo1JEyX88SnX9iWY2il/?mibextid=ZbWKwL"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/suraj_ydv_0?igsh=MXNrNGp6YXhjdHdidQ=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section back-to-top">
+                <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+
+    let popup = document.getElementById("popup");
+    function openPopup() {
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+
+    // footr
+
+    // Get the button
+    var backToTopButton = document.getElementById("backToTop");
+
+    // Show the button when the user scrolls down 20px from the top of the document
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to the top of the document
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+
+</script>
+
+</html>
